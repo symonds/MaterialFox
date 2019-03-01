@@ -50,7 +50,8 @@ menuitem,
 	color: inherit !important;
 }
 
-richlistbox
+richlistbox,
+.ac-title
 {
 	color: inherit !important;
 }
@@ -61,12 +62,13 @@ menuitem,
 {
 	padding: 0 24px 0 !important;
 	min-height: 28px !important;
+	border: 0 !important;
 }
 
 /* hover */
-menu:not([disabled]):not([open]):hover,
-menuitem:not([disabled]):not([_moz-menuactive]):hover,
-.autocomplete-richlistitem:not([disabled]):not([selected]):hover
+menu:not([disabled=true]):not([open]):hover,
+menuitem:not([disabled=true]):not([_moz-menuactive]):hover,
+.autocomplete-richlistitem:not([disabled=true]):not([selected]):hover
 {
 	background-color: var(--arrowpanel-dimmed) !important;
 }
@@ -80,9 +82,9 @@ menuitem[_moz-menuactive]
 	color: var(--autocomplete-popup-highlight-color) !important;
 }
 
-menu[disabled],
-menuitem[disabled],
-.autocomplete-richlistitem[disabled]
+menu[disabled=true],
+menuitem[disabled=true],
+.autocomplete-richlistitem[disabled=true]
 {
 	opacity: .5 !important;
 }
@@ -99,7 +101,9 @@ menuseparator
 }
 
 /*.menu-iconic-icon,*/
-.menu-right
+.menu-right,
+.ac-site-icon,
+.ac-type-icon
 {
 	fill: currentColor !important;
 	-moz-context-properties: fill, stroke, fill-opacity, stroke-opacity !important;
